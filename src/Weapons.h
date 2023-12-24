@@ -5,7 +5,6 @@
 
 #include <SFML/Graphics.hpp>
 
-//#include "Weapons_choise.h"
 #include "Save.h"
 #include "AssetManager.h"
 #include "GameState.h"

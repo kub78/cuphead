@@ -17,7 +17,6 @@ Player::Player(string path_to_animtaion, shared_ptr <GameSound> game_sound, sf::
 	else {	
 		isSecondWeapon = false;
 	}
-	//isSecondWeapon = true;
 	sprite.setScale(1, 1);
 	sprite.setColor(Color(255, 255, 255));
 	collider.setSize(Vector2f(54, 108));
@@ -62,7 +61,6 @@ void Player::jump()
 	jumptime = 0.75;
 	game_sound->stop(4);
 	game_sound->play(4);
-	//game_sound->play(2);
 }
 
 int Player::getHeal() {

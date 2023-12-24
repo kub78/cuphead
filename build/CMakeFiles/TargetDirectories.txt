@@ -1,3 +1,0 @@
-C:/cuphead/build/CMakeFiles/cuphead.dir
-C:/cuphead/build/CMakeFiles/edit_cache.dir
-C:/cuphead/build/CMakeFiles/rebuild_cache.dir

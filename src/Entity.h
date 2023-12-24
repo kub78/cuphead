@@ -16,11 +16,11 @@ protected:
 	bool isAlive = true;
 	bool collide = false;
 	bool dash_is_over = true;
-	double jumptime = 0; // ����� ���
+	double jumptime = 0;
 	double gravitry = 300;
 	double dash_cooldown = 0;
 	const double null_gravity = 300;
-	bool is_jumping = false; // � ����� is_teleporting
+	bool is_jumping = false;
 	float speed = 0.0;
 	Vector2f last_pos;
 	RectangleShape collider, groudPoint;

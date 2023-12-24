@@ -19,7 +19,7 @@ Player::Player(string path_to_animtaion, shared_ptr <GameSound> game_sound, sf::
 	}
 	//isSecondWeapon = true;
 	sprite.setScale(1, 1);
-	sprite.setColor(Color(255, 255, 255));//зачем цвет
+	sprite.setColor(Color(255, 255, 255));
 	collider.setSize(Vector2f(54, 108));
 	collider.setOrigin(27, 54);
 	collider.setPosition(spawn_pos);

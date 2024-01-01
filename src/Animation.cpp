@@ -77,12 +77,7 @@ void AnimObject::play_animation(float delta_time) {
 			sprite.setTextureRect(mirrored_rect);
 		}
 
-		if (current_animation != "Duck") {
-			sprite.setOrigin(frames[current_animation][current_frame].width / 2, frames[current_animation][current_frame].height / 2);
-		}
-		else {
-			sprite.setOrigin(frames[current_animation][current_frame].width / 2 - 14, frames[current_animation][current_frame].height);
-		}
+		sprite.setOrigin(frames[current_animation][current_frame].width / 2 , frames[current_animation][current_frame].height / 2);
 	}
 	else {
 		sprite.setTexture(texture_frames[current_animation][current_frame]);

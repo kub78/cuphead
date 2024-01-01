@@ -1,0 +1,3 @@
+C:/Cuphead/build/CMakeFiles/cuphead.dir
+C:/Cuphead/build/CMakeFiles/ALL_BUILD.dir
+C:/Cuphead/build/CMakeFiles/ZERO_CHECK.dir

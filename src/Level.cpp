@@ -1,8 +1,9 @@
-﻿#include "Level.h"
+#include "Level.h"
 #include <chrono>
 
 Level::Level(int level_number, shared_ptr<RenderWindow> window, shared_ptr <GameSound> game_sound) : window(window), level_number(level_number), save(save),game_sound(game_sound) {
-	window->setVerticalSyncEnabled(true);
+	//window->setVerticalSyncEnabled(true);
+	//window->setFramerateLimit(144);
 	level_number = level_number;
 	camera.reset(FloatRect(540,0,1920, 1080));
 
@@ -127,14 +128,6 @@ int Level::run() {
 		if (!is_lose) {
 			this->player->update(time.count(), event);
 
-			bool loop_on_ground = false;
-			for (Element& element_iter : elements) {
-				if (player->get_groundCollider_bounds().intersects(element_iter.self.getGlobalBounds())) {
-					loop_on_ground = true;
-				}
-			}
-			player->setOnGround(loop_on_ground);
-
 			player->play_animation(time.count());
 		
 			if (player->getPosition().x < level_size * 54 - 1920/2) {
@@ -189,8 +182,8 @@ int Level::run() {
 					out << json_reader;
 					out.close();
 				}
-				camera.setCenter(960, 540);
-				window->setView(camera);
+				//camera.setCenter(960, 540);
+				//window->setView(camera);
 				is_lose = 2;		
 			}
 
@@ -221,9 +214,6 @@ int Level::run() {
 
 				if (enemy_iter.getCollide()) {
 					enemy_iter.update_position();
-					if (enemy_iter.getType() != Enemies::ACORN) {
-						
-					}
 				}
 				else {
 					enemy_iter.save_position();
@@ -297,7 +287,6 @@ int Level::run() {
 				}
 				if (enemy_iter.getType() == BOSS) {
 					if (enemy_iter.isAttack) {
-						std::cout << "A" << std::endl;
 						enemies.push_back(*(new Acorn(sf::Vector2f(enemy_iter.get_position().x, enemy_iter.get_position().y))));
 					}
 				}
@@ -322,7 +311,7 @@ int Level::run() {
 				return false;
 				}), level_coins.end());
 			heal_count.setString("HP " + std::to_string(player->getHeal()));
-			if (player->getHeal() >= 3) {
+			if (player->getHeal() == 3) {
 				heal_count.setFillColor(sf::Color::Green);
 			}
 			else if (player->getHeal() == 2) {

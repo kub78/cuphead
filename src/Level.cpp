@@ -26,7 +26,7 @@ Level::Level(int level_number, shared_ptr<RenderWindow> window, shared_ptr <Game
 	coin_bar.setScale(0.5, 0.5);
 
 
-	font.loadFromFile("C:/Windows/Fonts/Comicz.ttf");
+	//font.loadFromFile("C:/Windows/Fonts/Comicz.ttf");
 
 	ifstream in("save.json");
 	in >> json_reader;
@@ -36,7 +36,7 @@ Level::Level(int level_number, shared_ptr<RenderWindow> window, shared_ptr <Game
 	coin_count.setString("x" + to_string(coins));
 	coin_count.setCharacterSize(48);
 	coin_count.setFillColor(sf::Color::Magenta);
-	coin_count.setFont(font);
+	coin_count.setFont(AssetManager::GetFont("font/font_menu.otf"));
 	
 	heal_count.setString("HP");
 	heal_count.setCharacterSize(48);

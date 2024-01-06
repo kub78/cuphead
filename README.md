@@ -2,6 +2,18 @@
 
 ### **Welcome to the Cuphead Clone project! This is one of my first significant projects in C++, and I'm excited to share it with you. I've dedicated 3.5 months to bring this game to life, inspired by the challenging and visually stunning Cuphead.**
 
+## How to play
+### You will have buttons in the game menu:
+1. Levels
+2. Weapons
+3. Records
+4. Setting
+5. Exit
+
+### Initially, you will have the Training level open in the Levels menu. To open the next level, you must complete all the previous levels. Upon successful completion of the level, the best time will be recorded in the Records menu. In the Weapons menu, you can change weapons (the selection takes place on the A and D buttons). In the Setting menu, you can turn on/off the music and all sounds in the game.
+### All settings(save.json) and levels are stored in the buld folder.
+___
+
 ## Building a project for Windows
 
 1. Download and install [Git](https://git-scm.com/download/win ) from the official website
